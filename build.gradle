@@ -1,0 +1,41 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.4.1.RELEASE'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    group 'com.beankids.coretrack'
+    baseName 'SpringBootExample'
+    version '1.0.0'
+}
+
+//sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.4.1.RELEASE'
+
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.10'
+
+
+
+}
